@@ -35,13 +35,13 @@ Entry code for MNIST:
     cd metaopt/mnist 
 
     ## Global-OHO
-    python -u main.py --is_cuda 1 --mlr 0.00001 --lr 0.1 --lambda_l2 0.0000 --opt_type sgd --update_freq 1 --save 1  --model_type mlp --num_epoch 300 --batch_size_vl 1000 --save_dir [YOUR DIRECTORY] 
+    python -u main.py --is_cuda 1 --mlr 0.00001 --lr 0.1 --lambda_l2 0.0000 --opt_type sgd --update_freq 1 --save 1  --model_type mlp --num_epoch 100 --batch_size_vl 100 --save_dir [YOUR DIRECTORY] 
 
     ## Full-OHO (hyperparameter sets per every layer)
-    python -u main.py --is_cuda 1 --mlr 0.00001 --lr 0.1 --lambda_l2 0.0000 --opt_type sgd --update_freq 1 --save 1  --model_type amlp --num_epoch 300 --batch_size_vl 1000 --save_dir [YOUR DIRECTORY] 
+    python -u main.py --is_cuda 1 --mlr 0.00001 --lr 0.1 --lambda_l2 0.0000 --opt_type sgd --update_freq 1 --save 1  --model_type amlp --num_epoch 100 --batch_size_vl 100 --save_dir [YOUR DIRECTORY] 
 
     ## Layer-wise OHO 
-    python -u main_quotient.py --opt_type sgd --mlr 0.000001 --lr 0.1 --lambda_l2 0.0 --save 1 --num_epoch 5 --batch_size_vl 1000 --update_freq 1 --reset_freq 0 --num_hlayers 4 --save_dir [YOUR DIRECTORY] 
+    python -u main_quotient.py --opt_type sgd --mlr 0.000001 --lr 0.1 --lambda_l2 0.0 --save 1 --num_epoch 100 --batch_size_vl 100 --update_freq 1 --reset_freq 0 --num_hlayers 4 --save_dir [YOUR DIRECTORY] 
 ```
 Entry code for CIFAR10
 ```
