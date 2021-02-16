@@ -1,6 +1,7 @@
 # Online hyperparameter optimization by real-time recurrent learning
 
-Pytorch implementation of Online hyperparameter optimization (OHO) code provided by Daniel Jiwoong Im, Cristina Savin, and Kyunghyun Cho
+Pytorch implementation of Online hyperparameter optimization (OHO) code provided by Daniel Jiwoong Im, Cristina Savin, and Kyunghyun Cho.
+
 An online hyperparameter optimization algorithm that is asymptotically exact and computationally tractable, both theoretically and practically. 
 Our framework takes advantage of the analogy between hyperparameter optimization and parameter learning in recurrent neural networks (RNNs). 
 It adapts a well-studied family of online learning algorithms for RNNs to tune hyperparameters and network parameters simultaneously, 
