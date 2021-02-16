@@ -1,0 +1,35 @@
+#!/bin/bash
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=2
+#SBATCH --gres=gpu:1
+#SBATCH --time=68:00:00
+#SBATCH --mem=64GB
+#SBATCH --mail-type=END,FAIL
+#SBATCH --job-name=geene_task.sbatch
+#SBATCH --output=./logs/%j.out
+#SBATCH --error=./logs/%j.err
+#python -u main.py --is_cuda 1 --mlr 0.00001 --lr 0.1 --lambda_l2 0.0 --batch_size_vl 1000 --save 1 --model_type rez18 --update_lambda 1 --reset_freq 0 
+#python -u main.py --is_cuda 1 --mlr 0.0 --lr 0.1 --lambda_l2 0.0 --batch_size_vl 1000 --save 1 --model_type rez18 --update_lambda 1 --reset_freq 0 
+
+
+#python -u main_race.py --opt_type sgd_step --mlr 0.0 --save_dir /scratch/ji641/exp/ --save 1
+#python -u main_race.py --opt_type sgd_expstep --mlr 0.0 --save_dir /scratch/ji641/exp/ --save 1
+#python -u main_race.py --opt_type adam --mlr 0.0 --save_dir /scratch/ji641/exp/ --save 1 --lr 0.0001
+#python -u main_race.py --opt_type sgd_cosinestep --mlr 0.0 --save_dir /scratch/ji641/exp/ --save 1
+#python -u main_race.py --opt_type sgd --mlr 0.0 --save_dir /scratch/ji641/exp/ --save 1
+#python -u main_race.py --opt_type sgd --mlr 0.00001 --save_dir /scratch/ji641/exp/ --save 1 
+
+python -u main.py --is_cuda 1 --ifold 2 --mlr 0.00001 --lr 0.1 --lambda_l2 0.0000 --opt_type sgd --update_freq 1 --save 1  --model_type rez18 --num_epoch 300 --batch_size_vl 1000 --update_lambda 1
+#python -u main.py --is_cuda 1 --mlr 0.00001 --lr 0.1 --lambda_l2 0.0000 --opt_type sgd --update_freq 1 --save 1  --model_type arez18 --num_epoch 510 --batch_size_vl 1000 --update_lambda 1
+#python -u main_quotient.py --opt_type sgd --mlr 0.000005 --lr 0.01 --lambda_l2 0.0000 --opt_type sgd  --update_freq 1 --batch_size_vl 1000 --update_lambda 1 --save 1  --save_dir /scratch/ji641/
+
+#python -u main_tns.py --is_cuda 1 --opt_type sgd --ood_type rotate --mlr 0.00001 --lr 0.1 --lambda_l2 0.0 --batch_size_vl 1000 --save 1 --model_type rez18 --update_lambda 1 --reset_freq 0 
+#python -u main_tns.py --is_cuda 1 --ood_type rotate --opt_type sgd_expstep --mlr 0.00000 --lr 0.1 --lambda_l2 0.0 --batch_size_vl 1000 --save 1 --model_type rez18 --update_lambda 1 --reset_freq 0 
+#python -u main_tns.py --is_cuda 1 --opt_type adam --ood_type target --mlr 0.00000 --lr 0.0001 --lambda_l2 0.0 --batch_size_vl 1000 --save 1 --model_type rez18 --update_lambda 1 --reset_freq 0 
+
+#python -u main_falconpunch.py --shake 30 --is_cuda 1 --opt_type sgd --mlr 0.00001 --lr 0.1 --lambda_l2 0.0 --batch_size_vl 1000 --save 1 --model_type rez18 --reset_freq 0 --num_epoch 300
+#python -u main_falconpunch.py --shake 30 --is_cuda 1 --opt_type sgd --mlr 0.0000 --lr 0.1 --lambda_l2 0.0003 --batch_size_vl 1000 --save 1 --model_type rez18 --reset_freq 0 --num_epoch 300
+
+
+
