@@ -31,20 +31,20 @@ Packages
 ## How to run
 Entry code for MNIST:
 ```
-    cd mnist 
+    cd metaopt/mnist 
 
     ## Global-OHO
-    python -u main.py --is_cuda 1 --ifold 0 --mlr 0.00001 --lr 0.1 --lambda_l2 0.0000 --opt_type sgd --update_freq 1 --save 1  --model_type mlp --num_epoch 300 --batch_size_vl 1000 --update_lambda 1 --save_dir [YOUR DIRECTORY] 
+    python -u main.py --is_cuda 1 --mlr 0.00001 --lr 0.1 --lambda_l2 0.0000 --opt_type sgd --update_freq 1 --save 1  --model_type mlp --num_epoch 300 --batch_size_vl 1000 --save_dir [YOUR DIRECTORY] 
 
     ## Full-OHO (hyperparameter sets per every layer)
-    python -u main.py --is_cuda 1 --ifold 0 --mlr 0.00001 --lr 0.1 --lambda_l2 0.0000 --opt_type sgd --update_freq 1 --save 1  --model_type amlp --num_epoch 300 --batch_size_vl 1000 --update_lambda 1 --save_dir [YOUR DIRECTORY] 
+    python -u main.py --is_cuda 1 --mlr 0.00001 --lr 0.1 --lambda_l2 0.0000 --opt_type sgd --update_freq 1 --save 1  --model_type amlp --num_epoch 300 --batch_size_vl 1000 --save_dir [YOUR DIRECTORY] 
 
     ## Layer-wise OHO 
     python -u main_quotient.py --opt_type sgd --mlr 0.000001 --lr 0.1 --lambda_l2 0.0 --save 1 --num_epoch 5 --batch_size_vl 1000 --update_freq 1 --reset_freq 0 --num_hlayers 4 --save_dir [YOUR DIRECTORY] 
 ```
 Entry code for CIFAR10
 ```
-    cd cifar
+    cd metaopt/cifar
 
     ## Global-OHO
     python -u main.py --is_cuda 1 --ifold 0 --mlr 0.00001 --lr 0.1 --lambda_l2 0.0000 --opt_type sgd --update_freq 1 --save 1  --model_type rez18 --num_epoch 300 --batch_size_vl 1000 --update_lambda 1 --save_dir [YOUR DIRECTORY] 
