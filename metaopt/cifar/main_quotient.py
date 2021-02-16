@@ -35,7 +35,7 @@ def ideal_hyper_exp(args, sampler_type=None, thrd=0.):
     trial, contF = 0, 1
     te_loss_list = []
     #quotient_list = [1,2,4,8,16]
-    quotient_list = [8]
+    quotient_list = [4]
     for quotient in quotient_list:
         args.quotient = quotient
         args.sampler_type = None
