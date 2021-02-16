@@ -54,18 +54,18 @@ Entry code for CIFAR10
 
 The performance against random search and Bayeisan hyper-parameter optimization :
 
-![Image of Performance](https://raw.githubusercontent.com/jiwoongim/OHO/master/figs/figsoho/figsoho-02.png)
+![Image of Performance](https://raw.githubusercontent.com/jiwoongim/OHO/main/figs/figsoho/figsoho-02.png)
 
 
 The test loss distribution over hyper-parameters 
-![Image of Test Loss Distribution](https://raw.githubusercontent.com/jiwoongim/OHO/master/figs/figsoho/figsoho-01.png)
+![Image of Test Loss Distribution](https://raw.githubusercontent.com/jiwoongim/OHO/main/figs/figsoho/figsoho-01.png)
 
 
 The performance ranging from Global-OHO and Layerwise-OHO
-![Image of Layer-wise OHO](https://raw.githubusercontent.com/jiwoongim/OHO/master/figs/figsoho/figsoho-04.png)
+![Image of Layer-wise OHO](https://raw.githubusercontent.com/jiwoongim/OHO/main/figs/figsoho/figsoho-04.png)
 
 
 The resiliency demo
-![Image of resiliency](https://raw.githubusercontent.com/jiwoongim/OHO/master/figs/figsoho/figsoho-07.png)
+![Image of resiliency](https://raw.githubusercontent.com/jiwoongim/OHO/main/figs/figsoho/figsoho-07.png)
 
 
