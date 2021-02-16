@@ -32,7 +32,7 @@ Entry code for MNIST:
     ## Global-OHO
     python -u main.py --is_cuda 1 --ifold 0 --mlr 0.00001 --lr 0.1 --lambda_l2 0.0000 --opt_type sgd --update_freq 1 --save 1  --model_type mlp --num_epoch 300 --batch_size_vl 1000 --update_lambda 1 --save_dir [YOUR DIRECTORY] 
 
-    ## Full-OHO 
+    ## Full-OHO (hyperparameter sets per every layer)
     python -u main.py --is_cuda 1 --ifold 0 --mlr 0.00001 --lr 0.1 --lambda_l2 0.0000 --opt_type sgd --update_freq 1 --save 1  --model_type amlp --num_epoch 300 --batch_size_vl 1000 --update_lambda 1 --save_dir [YOUR DIRECTORY] 
 
     ## Layer-wise OHO 
@@ -45,7 +45,7 @@ Entry code for CIFAR10
     ## Global-OHO
     python -u main.py --is_cuda 1 --ifold 0 --mlr 0.00001 --lr 0.1 --lambda_l2 0.0000 --opt_type sgd --update_freq 1 --save 1  --model_type rez18 --num_epoch 300 --batch_size_vl 1000 --update_lambda 1 --save_dir [YOUR DIRECTORY] 
 
-    ## Full-OHO
+    ## Full-OHO (hyperparameter sets per every layer)
     python -u main.py --is_cuda 1 --ifold 0 --mlr 0.00001 --lr 0.1 --lambda_l2 0.0000 --opt_type sgd --update_freq 1 --save 1  --model_type arez18 --num_epoch 300 --batch_size_vl 1000 --update_lambda 1 --save_dir [YOUR DIRECTORY] 
 
     ## Layer-wise OHO
@@ -54,10 +54,18 @@ Entry code for CIFAR10
 
 The performance against random search and Bayeisan hyper-parameter optimization :
 
-![Image of Performance](https://raw.githubusercontent.com/jiwoongim/OHO/master/figs/figsoho1.png)
+![Image of Performance](https://raw.githubusercontent.com/jiwoongim/OHO/master/figs/figsoho-02.png)
 
 
 The test loss distribution over hyper-parameters 
-![Image of Test Loss Distribution](https://raw.githubusercontent.com/jiwoongim/OHO/master/figs/figsoho2.png)
+![Image of Test Loss Distribution](https://raw.githubusercontent.com/jiwoongim/OHO/master/figs/figsoho-01.png)
+
+
+The performance ranging from Global-OHO and Layerwise-OHO
+![Image of Layer-wise OHO](https://raw.githubusercontent.com/jiwoongim/OHO/master/figs/figsoho-04.png)
+
+
+The resiliency demo
+![Image of resiliency](https://raw.githubusercontent.com/jiwoongim/OHO/master/figs/figsoho-07.png)
 
 
