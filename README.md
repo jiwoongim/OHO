@@ -21,8 +21,12 @@ If you use this in your research, we kindly ask that you cite the above arxiv pa
 ## Dependencies
 Packages
 * [Pytorch '1.7.0'](https://pytorch.org/get-started/locally/)
-
 `` 
+
+## Pip install path
+```
+   pip install -e .
+```
 
 ## How to run
 Entry code for MNIST:
