@@ -8,11 +8,11 @@ without repeatedly rolling out iterative optimization. This procedure yields sys
 
 For more information, see 
 ```bibtex
-@article{Im2015,
-    title={Generating Images with Recurrent Adversarial Networks },
-    author={Im, Daniel Jiwoong and Kim, Chris Dongjoo and Jiang, Hui and Memisevic, Roland},
+@article{Im2021OHO,
+    title={Online hyperparameter optimization by real-time recurrent learning},
+    author={Im, Daniel Jiwoong and Savin, Christina and Cho, Kyunghyun},
     journal={http://arxiv.org/abs/1602.05110},
-    year={2016}
+    year={2021}
 }
 ```
 If you use this in your research, we kindly ask that you cite the above arxiv paper.
