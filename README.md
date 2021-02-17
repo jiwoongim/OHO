@@ -5,14 +5,14 @@ Pytorch implementation of Online hyperparameter optimization (OHO) code provided
 An online hyperparameter optimization algorithm that is asymptotically exact and computationally tractable, both theoretically and practically. 
 Our framework takes advantage of the analogy between hyperparameter optimization and parameter learning in recurrent neural networks (RNNs). 
 It adapts a well-studied family of online learning algorithms for RNNs to tune hyperparameters and network parameters simultaneously, 
-without repeatedly rolling out iterative optimization. This procedure yields systematically better generalization performance compared to standard methods, at a fraction of wallclock time.
+without repeatedly rolling out iterative optimization. This procedure yields systematically better generalization performance compared to standard methods, at a fraction of wallclock time. (https://arxiv.org/abs/2102.07813)
 
 For more information, see 
 ```bibtex
 @article{Im2021OHO,
     title={Online hyperparameter optimization by real-time recurrent learning},
     author={Im, Daniel Jiwoong and Savin, Christina and Cho, Kyunghyun},
-    journal={http://arxiv.org/abs/1602.05110},
+    journal={arXiv preprint arXiv:2102.07813},
     year={2021}
 }
 ```
